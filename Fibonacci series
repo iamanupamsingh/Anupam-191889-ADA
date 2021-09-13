@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+
+    {
+     int n , t1 = 0, t2 = 1, ts = 0, i ; //declaring t1 and t2 as first two terms , ts as each next term
+
+    cout << "Enter the number of terms: ";  // taking no of terms as input from user
+
+     cin >> n;    //if we have to take n as input from user
+
+     // n=10;  // changing different values of n if we do not take from user.
+
+
+    cout << "Fibonacci Series of the required terms is : ";
+
+    for (int i = 1; i <= n; ++i)
+    {
+        // Prints the first two terms.
+        if(i == 1) {
+            cout << t1 << ", ";
+            continue;
+        }                            //if n is 1 only it prints t1 and does not go to next if
+        if(i == 2) {
+            cout << t2 << ", ";
+            continue;
+        }
+        ts = t1 + t2;
+        t1 = t2;
+        t2 = ts;
+
+        cout << ts << ", ";
+    }
+    return 0;
+}
